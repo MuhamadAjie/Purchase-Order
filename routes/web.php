@@ -31,3 +31,6 @@ Route::get('/inputsupplier', 'AdminController@inputsupplier');
 Route::get('/inputinvoice', 'AdminController@inputinvoice');
 Route::get('/inputpemba', 'AdminController@inputpemba');
 Route::get('/inputbarang', 'AdminController@inputbarang');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
