@@ -5,30 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 3 | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('admin/dist/css/adminlte.min.css') }}">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="{{asset('admin/plugins/iCheck/square/blue.css') }}">
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="{{asset('admin/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('admin/bower_components/font-awesome/css/font-awesome.min.css')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="{{asset('admin/bower_components/Ionicons/css/ionicons.min.css')}}">
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ asset('login_theme/dist/css/adminlte.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ asset('login_theme/plugins/iCheck/square/blue.css') }}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition login-page">
- 
+
     @yield('content')
- 
-<!-- jQuery 3 -->
-<script src="{{ asset('admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="{{ asset('admin/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+<!-- jQuery -->
+<script src="{{ asset('login_theme/plugins/jquery/jquery.min.js') }}"></script>
+<!-- Bootstrap 4 -->
+<script src="{{ asset('login_theme/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- iCheck -->
-<script src="{{ asset('admin/plugins/iCheck/icheck.min.js') }}"></script>
+<script src="{{ asset('login_theme/plugins/iCheck/icheck.min.js') }}"></script>
 <script>
   $(function () {
     $('input').iCheck({
