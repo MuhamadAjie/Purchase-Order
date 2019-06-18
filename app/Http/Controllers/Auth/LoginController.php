@@ -44,6 +44,6 @@ class LoginController extends Controller
     
         $request->session()->invalidate();
     
-        return $this->loggedOut($request) ?: redirect('/halaman');
+        return $this->loggedOut($request) ?: redirect('/');
     }
 }

@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="/home/css/responsive.css">
     </head>
     <body>
-        
         <!--================Header Menu Area =================-->
         <header class="header_area">
             <div class="main_menu" id="mainNav">
@@ -35,17 +34,7 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item"><a class="nav-link" href="/halaman">Home</a></li> 
-								
-								<li class="nav-item"><a class="nav-link" href="/invoice">Lihat Invoice</a></li>
-								<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Purchase Order</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="/inputpo">Buat PO</a></li>
-										<li class="nav-item"><a class="nav-link" href="/dataPO">Lihat PO</a></li>
-									</ul>
-								</li> 
-								
+								<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 								<li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
 							</ul>
 						</div> 
@@ -54,7 +43,6 @@
             </div>
         </header>
         <!--================Header Menu Area =================-->
-        
         <!--================Home Banner Area =================-->
         <section class="banner_area">
             <div class="banner_inner d-flex align-items-center">
@@ -71,18 +59,9 @@
             </div>
         </section>
         <!--================End Home Banner Area =================-->
-        
         <!--================Contact Area =================-->
         <section class="contact_area p_120">
             <div class="container">
-                <div id="mapBox" class="mapBox" 
-                    data-lat="40.701083" 
-                    data-lon="-74.1522848" 
-                    data-zoom="13" 
-                    data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-                    data-mlat="40.701083"
-                    data-mlon="-74.1522848">
-                </div>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="contact_info">
@@ -131,62 +110,41 @@
             </div>
         </section>
         <!--================Contact Area =================-->
-        
         <!--================Footer Area =================-->
-         <footer class="footer_area p_120">
-          <div class="container">
-            <div class="row footer_inner">
-              <div class="col-lg-5 col-sm-6">
-                <aside class="f_widget ab_widget">
-                  <div class="f_title">
-                    <h3>About Us</h3>
-                  </div>
-                  <p>VISI : Menjadi Perusahaan Terbaik Dan Profesional Dalam Menyediakan Kebutuhan Sistem
-                  Proteksi Kebakaran Yang Tepat Dan Akurat .</p>
-                </aside>
-              </div>
-              <div class="col-lg-5 col-sm-6">
-                <aside class="f_widget news_widget">
-                  <div class="f_title">
-                    <h3>About Us</h3>
-                  </div>
-                  <p>"The Right System For Protection </p>
-                     <p>industrial fire protection specialist" </p>
-                  <div id="mc_embed_signup">
-                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
-                                  <div class="input-group d-flex flex-row">
-                                        <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>    
-                                    </div>        
-                                    <div class="mt-10 info"></div>
-                                </form>
-                            </div>
-                </aside>
-              </div>
-              <div class="col-lg-2">
+        <footer class="footer_area p_120">
+            <div class="container">
+                <div class="row footer_inner">
+                    <div class="col-lg-5 col-sm-6">
+                        <aside class="f_widget ab_widget">
+                        <div class="f_title">
+                            <h3>About Us</h3>
+                        </div>
+                        <p>VISI : Menjadi Perusahaan Terbaik Dan Profesional Dalam Menyediakan Kebutuhan Sistem
+                        Proteksi Kebakaran Yang Tepat Dan Akurat .</p>
+                        </aside>
+                    </div>
+            <div class="col-lg-5 col-sm-6"></div>
+            <div class="col-lg-2">
                 <aside class="f_widget social_widget">
-                  <div class="f_title">
+                <div class="f_title">
                     <h3>Follow Us</h3>
-                  </div>
-                  <p>Let us be social</p>
-                  <ul class="list">
+                </div>
+                <p>Let us be social</p>
+                <ul class="list">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                     <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                  </ul>
+                </ul>
                 </aside>
-              </div>
+            </div>
             </div>
             <div class="copy_right_text">
-              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script>  PT.Theris Proteksi| Project KP2019  by <a href="https://colorlib.com" target="_blank">Anjany & Aji</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>  PT.Theris Proteksi| Project KP2019  by <a href="https://colorlib.com" target="_blank">Anjany & Aji</a></p>
             </div>
-          </div>
+        </div>
         </footer>
         <!--================End Footer Area =================-->
-        
         <!--================Contact Success and Error message Area =================-->
         <div id="success" class="modal modal-message fade" role="dialog">
             <div class="modal-dialog">
@@ -201,9 +159,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>  PT.T
                 </div>
             </div>
         </div>
-
         <!-- Modals error -->
-
         <div id="error" class="modal modal-message fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -218,10 +174,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>  PT.T
             </div>
         </div>
         <!--================End Contact Success and Error message Area =================-->
-        
-        
-        
-        
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="/home/js/jquery-3.2.1.min.js"></script>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin Purchase Order</title>
+  <title>Purchase Order APP</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -16,14 +16,12 @@
   <link rel="stylesheet" href="/admin/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="/admin/dist/css/skins/_all-skins.min.css">
-
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
-
   <header class="main-header">
     <!-- Logo -->
     <a href="#" class="logo">
@@ -41,7 +39,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
@@ -61,7 +58,6 @@
                         <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
-                        
                         <small><i class="fa fa-clock-o"></i> </small>
                       </h4>
                       <p></p>
@@ -125,48 +121,20 @@
               </li>
             </ul>
           </li>
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Admin</span>
+          <li class="nav-item">
+            <a title="logout" class="nav-link" href="{{ route('logout') }}"
+              onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                <i class="fa fa-sign-out"></i>
             </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                <p>
-                  admin - Admin PT Theris
-                  <small></small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a title="logout" class="nav-link" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();">
-                      <i class="btn btn-default btn-flat">Logout</i>
-                  </a>
-          
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
-                  </form>
-                </div>
-              </li>
-            </ul>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-
-  <!-- =============================================== -->
 
   <!-- Left side column. contains the sidebar -->
   <aside class="main-sidebar">
@@ -194,16 +162,13 @@
       </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-       <ul class="sidebar-menu" data-widget="tree">
+      <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="">
           <a href="/dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-             
-            </span>
+            <span class="pull-right-container"></span>
           </a>
-          
         </li>
         <li class="treeview">
           <a href="#">
@@ -215,10 +180,8 @@
           <ul class="treeview-menu">
             <li><a href="/invoice"><i class="fa fa-circle-o"></i> Data Invoice</a></li>
             <li><a href="/profile"><i class="fa fa-circle-o"></i> Profile Supplier</a></li>
-            
             <li><a href="/dataPO"><i class="fa fa-circle-o"></i> Data PO </a></li>
-            <li><a href="/pemba"><i class="fa fa-circle-o"></i> Data Pembayaran </a></li>
-            
+            <li><a href="/pembayaran"><i class="fa fa-circle-o"></i> Data Pembayaran </a></li>
           </ul>
         <li class="treeview">
           <a href="#">
@@ -229,13 +192,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            
             <li><a href="/inputsupplier"><i class="fa fa-circle-o"></i> Input Data Supplier</a></li>
-            
+            <li><a href="/inputbarang"><i class="fa fa-circle-o"></i> Input Barang</a></li>
           </ul>
         </li>
-         
-        
         <li class="treeview">
           <a href="#">
             <i class="fa fa-file-text"></i>
@@ -245,9 +205,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            
             <li><a href="/inputpo"><i class="fa fa-circle-o"></i> Input PO</a></li>
-            
           </ul>
         </li>
         <li class="treeview">
@@ -259,12 +217,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            
             <li><a href="/inputinvoice"><i class="fa fa-circle-o"></i> Input Invoice</a></li>
-            
           </ul>
         </li>
-       <li class="treeview">
+      <li class="treeview">
           <a href="#">
             <i class="fa fa-credit-card"></i>
             <span> Pembayaran</span>
@@ -273,60 +229,25 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            
-            <li><a href="/inputpemba"><i class="fa fa-circle-o"></i> Input Pembayaran</a></li>
-            
+            <li><a href="/inputpembayaran"><i class="fa fa-circle-o"></i> Input Pembayaran</a></li>
           </ul>
         </li>
-
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Charts</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="/charts"><i class="fa fa-circle-o"></i> Grafik Pengeluaran</a></li>
-            
-          </ul>
-        </li>
-        <li>
-          <a href="/calendar">
-            <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
-        </li>
-        
-        
-       
     <!-- /.sidebar -->
   </aside>
-  <!-- =============================================== -->
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-   @yield('content')
-
+    @yield('content')
   </div>
   <!-- /.content-wrapper -->
-
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
     <strong>Copyright &copy; 2019 PT. THERIS PROTEKSI</a>.</strong> 
   </footer>
-
   <!-- Control Sidebar -->
-  
   <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->

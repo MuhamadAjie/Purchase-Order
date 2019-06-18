@@ -3,7 +3,7 @@
 @section('content')
 <div class="login-box">
   <div class="login-logo">
-    <a href="/"><b>Laravel 5</b> Login</a>
+    <a href="/"><b>Please</b> Login</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -14,7 +14,6 @@
         @csrf
         <div class="input-group mb-3">
           <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} has-feedback" placeholder="Email" name="email" value="{{ old('email') }}" required>
-
           @if ($errors->has('email'))
               <span class="invalid-feedback" role="alert">
                   <strong>{{ $errors->first('email') }}</strong>

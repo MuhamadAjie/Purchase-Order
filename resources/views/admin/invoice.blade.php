@@ -10,8 +10,8 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Invoice</li>
+        <li><a href="#">Data Master</a></li>
+        <li class="active">Data Invoice</li>
       </ol>
     </section>
 
