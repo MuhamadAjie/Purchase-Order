@@ -3,13 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
-{
-   public function dashboard(){
-   	return view('admin.dashboard');
-   }
-
+{  
    public function charts(){
    	return view('admin.charts');
    }
@@ -58,7 +55,8 @@ class AdminController extends Controller
     return view('admin.inputbarang');
    }
    
-   
-   
-
+   public function __construct()
+   {
+      $this->middleware('auth');
+   }
 }

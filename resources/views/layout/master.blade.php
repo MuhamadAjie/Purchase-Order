@@ -13,17 +13,9 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="/admin/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/admin/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="/admin/css/skins/_all-skins.min.css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="/admin/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="/admin/dist/css/skins/_all-skins.min.css">
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -34,11 +26,11 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>A</b>P</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>Purchase Order</span>
+      <span class="logo-lg"><b>Admin</b>Purchase</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -66,7 +58,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="/admin/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         
@@ -116,12 +108,10 @@
                   <li><!-- Task item -->
                     <a href="#">
                       <h3>
-                       
                         <small class="pull-right"></small>
                       </h3>
                       <div class="progress xs">
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only"></span>
                         </div>
                       </div>
@@ -138,14 +128,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="/admin/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Admin</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="/admin/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
+                <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 <p>
                   admin - Admin PT Theris
                   <small></small>
@@ -159,7 +148,15 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Logout</a>
+                  <a title="logout" class="nav-link" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                      <i class="btn btn-default btn-flat">Logout</i>
+                  </a>
+          
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
                 </div>
               </li>
             </ul>
@@ -174,15 +171,15 @@
   <!-- Left side column. contains the sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
+    <?php $currentUser = Auth::user();?>
     <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="/admin/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="{{ $currentUser->name }}">
         </div>
         <div class="pull-left info">
-          <p>Admin</p>
-          
+          <a href="#" class="d-block">{{ $currentUser->name }}</a>
         </div>
       </div>
       <!-- search form -->
@@ -241,7 +238,7 @@
         
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i>
+            <i class="fa fa-file-text"></i>
             <span> Purchase Order</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -255,7 +252,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i>
+            <i class="fa fa-file-text"></i>
             <span> Invoice </span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -269,7 +266,7 @@
         </li>
        <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i>
+            <i class="fa fa-credit-card"></i>
             <span> Pembayaran</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -320,9 +317,9 @@
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
+      <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2019 Kerja Praktik PT. THERIS PROTEKSI</a>.</strong> 
+    <strong>Copyright &copy; 2019 PT. THERIS PROTEKSI</a>.</strong> 
   </footer>
 
   <!-- Control Sidebar -->
@@ -343,9 +340,9 @@
 <!-- FastClick -->
 <script src="/admin/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="/admin/js/adminlte.min.js"></script>
+<script src="/admin/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/admin/js/demo.js"></script>
+<script src="/admin/dist/js/demo.js"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()

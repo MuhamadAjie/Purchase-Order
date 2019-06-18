@@ -15,7 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', 'AdminController@dashboard');
+Route::get('/halaman', function () {
+    return view('admin.halaman');
+});
+Route::get('/contact', function () {
+    return view('admin.contact');
+});
+
 Route::get('/charts', 'AdminController@charts');
 Route::get('/calendar', 'AdminController@calendar');
 Route::get('/inputpo', 'AdminController@inputpo');
@@ -33,4 +39,4 @@ Route::get('/inputpemba', 'AdminController@inputpemba');
 Route::get('/inputbarang', 'AdminController@inputbarang');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
