@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
@@ -45,7 +45,7 @@
                                             <form action="{{ route('invoice.destroy', $row->id) }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
-                                                <a href="{{ route('invoice.print', $row->id) }}" class="btn btn-secondary btn-sm">Print</a>
+                                                <a href="{{ route('invoice.print', $row->id) }}" class="btn btn-primary btn-sm">Print</a>
                                                 <a href="{{ route('invoice.edit', $row->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                                 <button class="btn btn-danger btn-sm">Delete</button>
                                             </form>

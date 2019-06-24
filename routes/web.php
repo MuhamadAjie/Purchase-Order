@@ -25,7 +25,6 @@ Route::get('/dataPO', 'AdminController@dataPO');
 Route::get('/pembayaran', 'AdminController@pembayaran');
 Route::get('/inputsupplier', 'AdminController@inputsupplier');
 Route::get('/inputpo', 'AdminController@inputpo');
-Route::get('/inputinvoice', 'AdminController@inputinvoice');
 Route::get('/inputpembayaran', 'AdminController@inputpembayaran');
 Route::get('/inputbarang', 'AdminController@inputbarang');
 

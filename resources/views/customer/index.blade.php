@@ -1,18 +1,18 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-6">
                                 <h3 class="card-title">Manajemen Data Pelanggan</h3>
+                                <a href="{{ url('/customer/new') }}" class="btn btn-primary btn-sm float-left">Tambah Data</a>
+                                <p></p>
                             </div>
-                            <div class="col-md-6">
-                                <a href="{{ url('/customer/new') }}" class="btn btn-primary btn-sm float-right">Tambah Data</a>
-                            </div>
+                                
                         </div>
                     </div>
                     <div class="card-body">

@@ -18,6 +18,12 @@
   <link rel="stylesheet" href="/admin/dist/css/skins/_all-skins.min.css">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <style>
+    .content-wrapper {
+      background-color: #ffffff;
+    }
+  </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -178,9 +184,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/invoice"><i class="fa fa-circle-o"></i> Data Invoice</a></li>
             <li><a href="/profile"><i class="fa fa-circle-o"></i> Profile Supplier</a></li>
             <li><a href="/dataPO"><i class="fa fa-circle-o"></i> Data Purchase Order</a></li>
+            <li><a href="/invoice"><i class="fa fa-circle-o"></i> Data Invoice</a></li>
             <li><a href="/pembayaran"><i class="fa fa-circle-o"></i> Data Pembayaran </a></li>
           </ul>
         <li class="treeview">
@@ -205,7 +211,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/inputpo"><i class="fa fa-circle-o"></i> Input Purchase Order</a></li>
+            <li><a href="/inputpo"><i class="fa fa-circle-o"></i> Buat Purchase Order</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -217,7 +223,6 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/inputinvoice"><i class="fa fa-circle-o"></i> Input Invoice</a></li>
             <li><a href="{{ route('invoice.create') }}"><i class="fa fa-circle-o"></i> Buat Invoice</a></li>
             <li><a href="{{ route('invoice.index') }}"><i class="fa fa-circle-o"></i> List Invoice</a></li>
             <li><a href="{{ url('/customer') }}"><i class="fa fa-circle-o"></i> Manajemen Pelanggan</a></li>
