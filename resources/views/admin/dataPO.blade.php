@@ -1,4 +1,4 @@
- @extends('layout.master')
+ @extends('layouts.master')
  @section('content')
     <section class="content-header">
       <h1>
@@ -8,7 +8,7 @@
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Data Master</a></li>
-        <li class="active">Data PO</li>
+        <li class="active">Data Purchase Order</li>
       </ol>
     </section>
 

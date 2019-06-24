@@ -180,7 +180,7 @@
           <ul class="treeview-menu">
             <li><a href="/invoice"><i class="fa fa-circle-o"></i> Data Invoice</a></li>
             <li><a href="/profile"><i class="fa fa-circle-o"></i> Profile Supplier</a></li>
-            <li><a href="/dataPO"><i class="fa fa-circle-o"></i> Data PO </a></li>
+            <li><a href="/dataPO"><i class="fa fa-circle-o"></i> Data Purchase Order</a></li>
             <li><a href="/pembayaran"><i class="fa fa-circle-o"></i> Data Pembayaran </a></li>
           </ul>
         <li class="treeview">
@@ -205,7 +205,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/inputpo"><i class="fa fa-circle-o"></i> Input PO</a></li>
+            <li><a href="/inputpo"><i class="fa fa-circle-o"></i> Input Purchase Order</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -218,6 +218,10 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/inputinvoice"><i class="fa fa-circle-o"></i> Input Invoice</a></li>
+            <li><a href="{{ route('invoice.create') }}"><i class="fa fa-circle-o"></i> Buat Invoice</a></li>
+            <li><a href="{{ route('invoice.index') }}"><i class="fa fa-circle-o"></i> List Invoice</a></li>
+            <li><a href="{{ url('/customer') }}"><i class="fa fa-circle-o"></i> Manajemen Pelanggan</a></li>
+            <li><a href="{{ url('/product') }}"><i class="fa fa-circle-o"></i> Manajemen Produk</a></li>
           </ul>
         </li>
       <li class="treeview">
