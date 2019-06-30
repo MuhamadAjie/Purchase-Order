@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Invoice</title>
+    <title>Purchase Order</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>
         body{
@@ -49,12 +49,12 @@
     <div class="container">
         <table>
             <caption>
-                Invoice
+                Purchase Order
             </caption>
             <thead>
                 <tr>
-                    <th colspan="3">Invoice <strong>#{{ $invoice->id }}</strong></th>
-                    <th>{{ $invoice->created_at->format('D, d M Y') }}</th>
+                    <th colspan="3">Purchase Order <strong>#{{ $purchase->id }}</strong></th>
+                    <th>{{ $purchase->created_at->format('D, d M Y') }}</th>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -67,10 +67,10 @@
                     </td>
                     <td colspan="2">
                         <h4>Pelanggan: </h4>
-                        <p>{{ $invoice->customer->name }}<br>
-                        {{ $invoice->customer->address }}<br>
-                        {{ $invoice->customer->phone }} <br>
-                        {{ $invoice->customer->email }}
+                        <p>{{ $purchase->customer->name }}<br>
+                        {{ $purchase->customer->address }}<br>
+                        {{ $purchase->customer->phone }} <br>
+                        {{ $purchase->customer->email }}
                         </p>
                     </td>
                 </tr>
@@ -82,7 +82,7 @@
                     <th>Qty</th>
                     <th>Subtotal</th>
                 </tr>
-                @foreach ($invoice->detail as $row)
+                @foreach ($purchase->detail as $row)
                 <tr>
                     <td>{{ $row->product->title }}</td>
                     <td>Rp {{ number_format($row->price) }}</td>
@@ -92,19 +92,19 @@
                 @endforeach
                 <tr>
                     <th colspan="3">Subtotal</th>
-                    <td>Rp {{ number_format($invoice->total) }}</td>
+                    <td>Rp {{ number_format($purchase->total) }}</td>
                 </tr>
                 <tr>
                     <th>Pajak</th>
                     <td></td>
                     <td>2%</td>
-                    <td>Rp {{ number_format($invoice->tax) }}</td>
+                    <td>Rp {{ number_format($purchase->tax) }}</td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
                     <th colspan="3">Total</th>
-                    <td>Rp {{ number_format($invoice->total_price) }}</td>
+                    <td>Rp {{ number_format($purchase->total_price) }}</td>
                 </tr>
             </tfoot>
         </table>

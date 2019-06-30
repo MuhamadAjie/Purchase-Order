@@ -150,10 +150,11 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="{{ $currentUser->name }}">
+          <img src="/admin/dist/img/avatar5.png" class="img-circle" alt="{{ $currentUser->name }}">
         </div>
         <div class="pull-left info">
-          <a href="#" class="d-block">{{ $currentUser->name }}</a>
+          <h6 href="#" class="d-block">{{ $currentUser->name }}</h6>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
       <!-- search form -->
@@ -184,9 +185,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/profile"><i class="fa fa-circle-o"></i> Profile Supplier</a></li>
-            <li><a href="/dataPO"><i class="fa fa-circle-o"></i> Data Purchase Order</a></li>
-            <li><a href="/invoice"><i class="fa fa-circle-o"></i> Data Invoice</a></li>
+            <li><a href="/profile"><i class="fa fa-circle-o"></i> Data Supplier</a></li>
+            <li><a href="{{ route('purchase.index') }}"><i class="fa fa-circle-o"></i> Data Purchase Order</a></li>
+            <li><a href="{{ route('invoice.index') }}"><i class="fa fa-circle-o"></i> Data Invoice</a></li>
             <li><a href="/pembayaran"><i class="fa fa-circle-o"></i> Data Pembayaran </a></li>
           </ul>
         <li class="treeview">
@@ -198,8 +199,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/inputsupplier"><i class="fa fa-circle-o"></i> Input Data Supplier</a></li>
-            <li><a href="/inputbarang"><i class="fa fa-circle-o"></i> Input Barang</a></li>
+            <li><a href="{{ url('/customer') }}"><i class="fa fa-circle-o"></i> Manajemen Pelanggan</a></li>
+            <li><a href="{{ url('/product') }}"><i class="fa fa-circle-o"></i> Manajemen Produk</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -211,7 +212,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/inputpo"><i class="fa fa-circle-o"></i> Buat Purchase Order</a></li>
+            <li><a href="{{ route('purchase.create') }}"><i class="fa fa-circle-o"></i> Buat Purchase Order</a></li>
+            <li><a href="{{ route('purchase.index') }}"><i class="fa fa-circle-o"></i> List Purchase Order</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -225,8 +227,6 @@
           <ul class="treeview-menu">
             <li><a href="{{ route('invoice.create') }}"><i class="fa fa-circle-o"></i> Buat Invoice</a></li>
             <li><a href="{{ route('invoice.index') }}"><i class="fa fa-circle-o"></i> List Invoice</a></li>
-            <li><a href="{{ url('/customer') }}"><i class="fa fa-circle-o"></i> Manajemen Pelanggan</a></li>
-            <li><a href="{{ url('/product') }}"><i class="fa fa-circle-o"></i> Manajemen Produk</a></li>
           </ul>
         </li>
       <li class="treeview">
@@ -238,7 +238,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/inputpembayaran"><i class="fa fa-circle-o"></i> Input Pembayaran</a></li>
+            <li><a href="/inputpembayaran"><i class="fa fa-circle-o"></i> Info Pembayaran</a></li>
           </ul>
         </li>
     <!-- /.sidebar -->

@@ -50,6 +50,17 @@ Route::group(['middleware' => 'auth'], function() {
         Route::delete('/{id}', 'CustomerController@destroy');
     });
     
+    Route::group(['prefix' => 'purchase'], function() {
+        Route::get('/', 'PurchaseController@index')->name('purchase.index');
+        Route::get('/new', 'PurchaseController@create')->name('purchase.create');
+        Route::post('/', 'PurchaseController@save')->name('purchase.store');
+        Route::get('/{id}', 'PurchaseController@edit')->name('purchase.edit');
+        Route::put('/{id}', 'PurchaseController@update')->name('purchase.update');
+        Route::delete('/{id}', 'PurchaseController@deleteProduct')->name('purchase.delete_product');
+        Route::delete('/{id}/delete', 'PurchaseController@destroy')->name('purchase.destroy');
+        Route::get('/{id}/print', 'PurchaseController@generatePurchase')->name('purchase.print');
+    });
+    
     Route::group(['prefix' => 'invoice'], function() {
         Route::get('/', 'InvoiceController@index')->name('invoice.index');
         Route::get('/new', 'InvoiceController@create')->name('invoice.create');
